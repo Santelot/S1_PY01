@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 1: ¡Plan de Diseño 3D! – Del T-Bar al Modelo Núcleo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        details > summary {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            list-style: none; /* Hide the default marker */
+            display: flex; /* Use flexbox */
+            justify-content: space-between; /* Space between title and time */
+        }
+        details > summary::-webkit-details-marker {
+            display: none; /* Hide the default marker in Webkit browsers */
+        }
+        details > summary::before {
+            content: '▶ '; /* Collapsed state marker */
+            margin-right: 5px;
+        }
+        details[open] > summary::before {
+            content: '▼ '; /* Expanded state marker */
+        }
+        .content { display: block; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; margin-top: -10px; border-top: none;} /* Changed display to block */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;} /* Style for static title */
+        .dialogue-notes {
+             font-style: italic;
+             color: #555;
+             margin-top: 5px;
+             display: block; /* Ensure notes appear on a new line */
+        }
+    </style>
+    <script>
+        // No specific JS needed for this structure, basic HTML5 <details> handles toggle.
+        // Ensure content starts visible since display: block is set.
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 1: ¡Plan de Diseño 3D! – Del T-Bar al Modelo Núcleo</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <details id="activity-0" class="activity" open>
+            <summary>📝 Resumen de Sesión</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Traducir el concepto del T-Bar a un plan técnico inicial en Kanban.</li>
+                                <li>Definir el modelo 3D núcleo (MVP - Prototipo Funcional Básico) para las siguientes 4 sesiones.</li>
+                                <li>Asignar roles 3D dentro de cada equipo.</li>
+                            </ul>
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave de la Sesión:</strong>
+                            <ul>
+                                <li>Tablero Kanban (físico/digital) preparado por equipo.</li>
+                                <li>Alcance del Modelo 3D Núcleo (MVP) claramente definido y anotado.</li>
+                                <li>Backlog inicial de tareas 3D en la columna "Por Hacer" del Kanban.</li>
+                                <li>Roles 3D asignados dentro de cada equipo.</li>
+                                <li>Primera tarea del núcleo movida a la columna "Modelando".</li>
+                            </ul>
+                             <strong>🔧 Preparación Previa Sugerida:</strong>
+                            <ol>
+                                <li>Tener acceso a los T-Bars y Combinaboards de la Fase 2 por equipo.</li>
+                                <li>Preparar material para tableros Kanban (físicos: post-its, rotuladores, pizarra/papel; digitales: enlace a herramienta como Trello, Miro, o similar).</li>
+                                <li>Revisar los roles 3D para poder explicarlos claramente.</li>
+                                <li>Tener lista la presentación de diapositivas sugerida (ver lista al final).</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: ¡Recordando la Misión ODS! -->
+        <details id="activity-1" class="activity">
+            <summary>🚀 Actividad 1: ¡Recordando la Misión ODS! <span>⏰ Tiempo: 5 minutos</span></summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (1 min) Bienvenida y conexión con fase anterior.</strong>
+                            <br>Asegurarse de que los equipos estén reunidos.
+                            <br>(Proyectar Diapositiva 1: Título de la Sesión)
+                        </td>
+                        <td>
+                            "¡Hola equipos! Bienvenidos a la Sesión 1 de nuestro 'Diseño 3D ODS Express'. Hoy damos un gran paso: ¡convertiremos esas ideas geniales que plasmaron en sus T-Bars y Combinaboards en un plan concreto para construir en 3D!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2: (3 min) Revisión del T-Bar por equipo.</strong>
+                            <br>Pedir a cada equipo que tenga a mano su T-Bar y Combinaboard de la Fase 2.
+                            <br>(Proyectar Diapositiva 2: Recordando la Misión ODS - Imagen genérica de un T-Bar/Combinaboard)
+                            <br>Circular brevemente para verificar que los equipos están revisando su trabajo previo.
+                        </td>
+                        <td>
+                            "Muy bien, tómense un par de minutos para recordar su misión ODS. Revisen su T-Bar: ¿Cuál era el problema que querían resolver? ¿Cuál era su solución innovadora? ¿Qué funciones clave definieron?"
+                             <br><br>
+                            <em>(Pausa mientras revisan)</em>
+                            <br><br>
+                             "¡Perfecto! ¡Equipos! Recuerden su increíble idea ODS del T-Bar. Manténganla muy presente, porque hoy... ¡hoy empezamos a construirla en 3D con Tinkercad!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3: (1 min) Establecer el objetivo de la sesión.</strong>
+                        </td>
+                        <td>
+                            "Nuestro objetivo hoy es triple: Primero, organizar nuestro trabajo con una herramienta llamada Kanban. Segundo, definir qué parte esencial de su idea vamos a construir primero, nuestro 'Modelo 3D Núcleo'. Y tercero, ¡asignar roles para que cada uno sepa cómo contribuir mejor al equipo 3D!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 2: ¡Kanban y Roles 3D al Mando! -->
+        <details id="activity-2" class="activity">
+            <summary>🛠️ Actividad 2: ¡Kanban y Roles 3D al Mando! <span>⏰ Tiempo: 7 minutos</span></summary>
+            <div class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (2 min) Explicar el Kanban.</strong>
+                            <br>(Proyectar Diapositiva 3: Kanban Visual - Columnas: 💡 Por Hacer, ⚙️ Modelando, 🧐 Revisando Diseño, ✅ ¡Listo!)
+                            <br>Señalar cada columna mientras se explica.
+                        </td>
+                        <td>
+                            "Para organizar nuestro trabajo de diseño 3D, usaremos un tablero Kanban. ¡Es súper útil! Imaginen un tablero dividido en columnas. La primera es 'Por Hacer' (💡), aquí pondremos todas las tareas que necesitamos completar. La segunda es 'Modelando' (⚙️), aquí irán las tareas en las que estemos trabajando activamente en Tinkercad. La tercera es 'Revisando Diseño' (🧐), para tareas que ya modelamos pero necesitan una revisión o aprobación. Y la última es '¡Listo!' (✅), ¡para celebrar las tareas completadas!"
+                            <br><span class="dialogue-notes">(Adaptar ligeramente si se usa una versión digital específica)</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2: (3 min) Presentar los Roles 3D.</strong>
+                            <br>(Proyectar Diapositiva 4: Roles 3D - Arquitecto/a, Modelador/a, Validador/a con iconos/descripciones breves)
+                            <br>Explicar brevemente la función principal de cada rol.
+                        </td>
+                        <td>
+                             "Para trabajar como un equipo de diseño profesional, tendremos roles especializados. Estos pueden rotar si lo deciden más adelante, pero para empezar, son importantes:"
+                             <br><br>
+                             "1. <strong>Arquitecto/a 3D:</strong> Es el visionario del equipo. Guía el diseño general, ayuda a definir qué construir (el Modelo Núcleo) y asegura que todo siga el plan del T-Bar. Apoya con ideas y técnicas en Tinkercad."
+                             <br>
+                             "2. <strong>Modelador/a 3D:</strong> ¡Es quien construye en Tinkercad! Toma las tareas del Kanban y usa las herramientas (formas, agrupar, hueco, alinear) para dar vida al diseño."
+                             <br>
+                             "3. <strong>Validador/a 3D:</strong> Es el ojo crítico del equipo. Revisa el trabajo del modelador, verifica que cumpla con los requisitos (medidas, alineación, idea del T-Bar) y prepara pruebas. ¡Asegura la calidad!"
+                             <br><span class="dialogue-notes">(Enfatizar que todos colaboran, pero cada rol tiene un enfoque principal)</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3: (2 min) Preparar el Tablero Kanban.</strong>
+                            <br>Indicar a cada equipo que prepare su tablero (físico o digital).
+                            <br>Instrucciones claras: Crear las 4 columnas mencionadas.
+                        </td>
+                        <td>
+                            "¡Manos a la obra! Cada equipo, prepare su tablero Kanban ahora. Si es físico, dibujen las 4 columnas en su pizarra o papel: 'Por Hacer', 'Modelando', 'Revisando Diseño', '¡Listo!'. Si es digital, creen su tablero en la herramienta que usaremos. ¡Tienen 2 minutos!"
+                            <br><span class="dialogue-notes">(Circular para asegurar que todos los equipos estén preparando su tablero correctamente)</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 3: ¡Definiendo el Modelo 3D Núcleo! -->
+        <details id="activity-3" class="activity">
+            <summary>🎯 Actividad 3: ¡Definiendo el Modelo 3D Núcleo! <span>⏰ Tiempo: 10 minutos</span></summary>
+            <div class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1: (2 min) Explicar el concepto de Modelo Núcleo (MVP).</strong>
+                             <br>(Proyectar Diapositiva 5: Definiendo el Modelo 3D Núcleo - Pregunta clave, concepto MVP)
+                             <br>Relacionarlo con el T-Bar.
+                        </td>
+                        <td>
+                            "Equipos, no podemos construir toda su increíble idea del T-Bar de golpe en estas 4 sesiones. Necesitamos empezar por lo más importante. A esto le llamamos el 'Modelo 3D Núcleo' o MVP (Minimum Viable Product). Es la versión más básica pero funcional de su idea. Piensen: ¿Qué parte o función de su diseño es ABSOLUTAMENTE ESENCIAL para mostrar cómo funciona su solución ODS?"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                             <strong>Paso 2: (7 min) Discusión guiada por el Arquitecto/a 3D.</strong>
+                             <br>Indicar que el Arquitecto/a 3D (aún no asignado formalmente, puede ser un rol temporal para esta discusión o el equipo elige un líder) debe guiar la discusión.
+                             <br>Formular la pregunta clave del PDF.
+                             <br>Animar a enfocarse en forma y función principal.
+                             <br>Circular activamente, escuchar las discusiones, hacer preguntas guía si los equipos se bloquean.
+                        </td>
+                        <td>
+                            "Ahora, en equipo, discutan esto durante los próximos 7 minutos. El Arquitecto/a 3D (o alguien que tome ese rol para esta charla) guiará la conversación. La pregunta clave es: <strong>'¿Cuál es la parte o función MÁS esencial de nuestro diseño ODS que podemos modelar de forma básica pero funcional en estas 4 sesiones en Tinkercad?'</strong>"
+                            <br><br>
+                            "Enfóquense en la forma principal y la función clave. No se preocupen por detalles pequeños o extras por ahora. ¿Qué es lo mínimo que necesitan construir para que se entienda su idea central del T-Bar?"
+                            <br><span class="dialogue-notes">(Ejemplos de preguntas guía si es necesario: "¿Qué parte es indispensable?", "¿Si quitaran esto, seguiría funcionando la idea principal?", "¿Qué forma básica representa mejor su concepto?")</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                             <strong>Paso 3: (1 min) Anotar la definición del Modelo Núcleo.</strong>
+                             <br>Pedir a cada equipo que escriba claramente en una hoja o en su espacio digital cuál es su Modelo 3D Núcleo definido.
+                        </td>
+                        <td>
+                            "¡Tiempo! Equipos, asegúrense de tener una definición clara de su Modelo 3D Núcleo. Anótenla ahora mismo en un lugar visible para todos en el equipo. ¡Este será nuestro objetivo principal para las próximas sesiones!"
+                            <br><span class="dialogue-notes">(Verificar que cada equipo tenga su MVP definido y anotado).</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+         <!-- Actividad 4: ¡Backlog Inicial 3D! -->
+        <details id="activity-4" class="activity">
+            <summary>📝 Actividad 4: ¡Backlog Inicial 3D! <span>⏰ Tiempo: 13 minutos</span></summary>
+            <div class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1: (2 min) Explicar la creación del Backlog.</strong>
+                             <br>Referirse al Modelo 3D Núcleo recién definido y al Kanban.
+                             <br>Indicar que el Arquitecto/a 3D guiará esta tarea.
+                        </td>
+                        <td>
+                            "Ahora que sabemos QUÉ vamos a construir (nuestro Modelo 3D Núcleo), necesitamos desglosarlo en tareas pequeñas y manejables para Tinkercad. A esta lista de tareas la llamamos 'Backlog'. El Arquitecto/a 3D guiará al equipo para crear este backlog inicial."
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                             <strong>Paso 2: (10 min) Descomponer el Modelo Núcleo en tareas.</strong>
+                             <br>Equipos trabajan juntos, guiados por el Arquitecto/a.
+                             <br>(Proyectar Diapositiva 6: Backlog Inicial 3D - Ejemplos de tareas, formato tarjeta)
+                             <br>Mostrar los ejemplos de tareas del PDF.
+                             <br>Instruir para escribir cada tarea en una tarjeta/post-it (físico) o crear una tarjeta digital.
+                             <br>Colocar todas las tareas creadas en la columna "Por Hacer" del Kanban.
+                             <br>Circular y apoyar la descomposición. Ayudar a que las tareas sean específicas y accionables en Tinkercad.
+                        </td>
+                        <td>
+                            "Piensen en los pasos necesarios para construir su Modelo Núcleo en Tinkercad. ¿Cuáles son las piezas principales? ¿Qué acciones necesitan realizar?"
+                            <br><br>
+                            "Aquí tienen algunos ejemplos de cómo podrían ser las tareas: <em>(Leer ejemplos del PDF)</em> 'Crear base principal', 'Modelar componente móvil X', 'Añadir textura Y (básica)', 'Alinear parte A y B', 'Agrupar estructura final'."
+                            <br><br>
+                            "Cada tarea debe ser clara y enfocada. Escriban cada una en una tarjeta o post-it diferente."
+                            <br><br>
+                            "A medida que las escriban, colóquenlas TODAS en la columna 'Por Hacer' (💡) de su tablero Kanban. ¡Este es su backlog inicial!"
+                            <br><br>
+                            "Tienen 10 minutos para descomponer su Modelo Núcleo y llenar su columna 'Por Hacer'. ¡Colaboren todos!"
+                            <br><span class="dialogue-notes">(Animar a pensar en términos de acciones en Tinkercad: crear, mover, escalar, agrupar, alinear, hacer hueco, etc.)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3: (1 min) Revisión rápida del Backlog.</strong>
+                            <br>Pedir a los equipos que miren su columna "Por Hacer".
+                        </td>
+                        <td>
+                            "¡Excelente trabajo! Echen un vistazo rápido a su columna 'Por Hacer'. ¿Tienen las tareas clave para empezar a construir su Modelo Núcleo? ¡Este es su plan de acción!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 5: ¡Equipo Listo! Asignación y ¡A Modelar! -->
+        <details id="activity-5" class="activity">
+            <summary>✅ Actividad 5: ¡Equipo Listo! Asignación y ¡A Modelar! <span>⏰ Tiempo: 5 minutos</span></summary>
+            <div class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1: (2 min) Asignar Roles 3D.</strong>
+                            <br>Pedir a cada equipo que asigne formalmente los roles de Arquitecto/a 3D, Modelador/a 3D y Validador/a 3D entre sus miembros para empezar.
+                            <br>Asegurarse de que cada miembro sepa qué rol tiene inicialmente.
+                        </td>
+                        <td>
+                            "¡Casi listos para la acción! Ahora, cada equipo debe decidir quién tomará cada rol para empezar: ¿Quién será el Arquitecto/a 3D? ¿Quién el Modelador/a 3D? ¿Y quién el Validador/a 3D?"
+                            <br><br>
+                            "Hablen rápidamente y asignen los roles. Recuerden que pueden rotar más adelante si quieren. ¡Decídanlo ahora!"
+                            <br><span class="dialogue-notes">(Esperar a que los equipos hagan la asignación. Preguntar si algún equipo necesita ayuda para decidir).</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2: (2 min) Mover la primera tarea y mensaje final.</strong>
+                            <br>Indicar al Modelador/a 3D de cada equipo que elija la primera tarea MÁS importante del backlog (probablemente la base o la pieza principal) y la mueva de "Por Hacer" a "Modelando".
+                            <br>(Proyectar Diapositiva 7: ¡Equipo Listo! - Resumen roles asignados, próxima acción: Modelar)
+                        </td>
+                        <td>
+                             "¡Roles asignados! Ahora, Modelador/a 3D de cada equipo: elige la primera tarea CRUCIAL de tu backlog en 'Por Hacer' (💡) - probablemente la que crea la base de su modelo - y muévela a la columna 'Modelando' (⚙️)."
+                             <br><br>
+                            <em>(Verificar que cada equipo haya movido una tarea).</em>
+                             <br><br>
+                             "¡Excelente! ¡Están listos para empezar a construir!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3: (1 min) Cierre de sesión y próximos pasos.</strong>
+                        </td>
+                         <td>
+                            "¡Fantástico trabajo hoy, equipos! Han creado su plan de diseño 3D, definido su Modelo Núcleo y están organizados con Kanban y roles. ¡El Modelador/a ya tiene su primera misión!"
+                            <br><br>
+                            "En la próxima sesión, ¡nos lanzaremos de lleno a Tinkercad! El Modelador/a empezará a dar forma a esa primera tarea, y los demás roles estarán listos para apoyar y validar."
+                            <br><br>
+                            "¡Prepárense para modelar! ¡Nos vemos en la Sesión 2!"
+                            <br><span class="dialogue-notes">(Asegurarse de que los tableros Kanban y la definición del Modelo Núcleo estén guardados o sean accesibles para la siguiente sesión).</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
